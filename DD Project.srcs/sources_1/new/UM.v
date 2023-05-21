@@ -61,5 +61,5 @@ module UM(
                 eom = 1; 
             end
         end
-    end
+    end
 endmodule

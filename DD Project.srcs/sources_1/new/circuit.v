@@ -34,8 +34,8 @@ module circuit(
     button start(btnc, clk, rst, som);
     button shift_left(btnl, clk, rst, sl);
     button shift_right(btnr, clk, rst, sr);
-    absolute abs(multiplier, multiplicand, abs_multiplier, abs_multiplicand, isNegative);
+    absolute abs(multiplier, multiplicand, abs_multiplier, abs_multiplicand, isNegative,som, clk, rst);
     UM multiply(clk, rst, abs_multiplier, abs_multiplicand, product, som, eom);
     binary_to_digits btd(product,units,tenth,hundredth,thousandth,thousdandth2);
-    bi_bcd bcd(units,tenth,hundredth,thousandth,thousdandth2,seg,an,clk,rst,sl,sr,som,isNegative);
+    bi_bcd bcd(units,tenth,hundredth,thousandth,thousdandth2,seg,an,clk,rst,sl,sr,som,eom,isNegative);
 endmodule

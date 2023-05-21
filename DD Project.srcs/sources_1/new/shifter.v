@@ -26,6 +26,22 @@ module shifter(
     output reg [3:0] first,second,third;
     input clk,rst,sl, sr, som;
     reg [1:0] sel;
+    always @ (posedge clk, posedge rst) begin
+         if(rst || som)
+            sel <= 0;
+         else begin
+            if(sl == 1 && sr == 1) begin
+                sel <= sel;
+            end else if(sl == 0 && sr == 0) begin
+                sel <= sel;
+            end else if(sl == 1 && sr == 0 && sel > 0) begin
+                sel <= sel-1;
+            end
+            else if(sl == 0 && sr == 1 && sel < 2) begin
+                sel <= sel+1;
+            end 
+         end 
+     end  
     always @ (*) begin
             if(sel ==0 || rst == 1) begin
                 first = units;
@@ -42,20 +58,7 @@ module shifter(
             end
         end
         
-    always @ (*) begin
-         if(rst || som)
-            sel <= 0;
-         else begin
-            if(sl == 1 && sr == 1) begin
-                sel <= sel;
-            end else if(sl == 0 && sr == 0) begin
-                sel <= sel;
-            end else if(sl == 1 && sr == 0 && sel > 0) begin
-                sel <= sel-1;
-            end
-            else if(sl == 0 && sr == 1 && sel < 2) begin
-                sel <= sel+1;
-            end 
-         end 
-     end
+//     always @(rst, som)begin
+//            sel <= 0;
+//     end 
 endmodule
