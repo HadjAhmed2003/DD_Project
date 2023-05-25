@@ -5,11 +5,11 @@
 // Create Date: 05/14/2023 09:47:07 PM
 // Design Name: 
 // Module Name: SevenSegDec
-// Project Name: 
+// Project Name: DD Project
 // Target Devices: 
 // Tool Versions: 
 // Description: 
-// 
+// This module is responsible for outputting a digit value on the seven segment display
 // Dependencies: 
 // 
 // Revision:

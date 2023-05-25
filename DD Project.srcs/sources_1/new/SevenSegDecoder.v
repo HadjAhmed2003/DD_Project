@@ -6,7 +6,7 @@
 // Create Date: 05/14/2023 09:50:02 PM
 // Design Name: 
 // Module Name: SevenSegDecoder
-// Project Name: 
+// Project Name: DD Project
 // Target Devices: 
 // Tool Versions: 
 // Description: 

@@ -4,12 +4,12 @@
 // 
 // Create Date: 05/14/2023 09:30:26 PM
 // Design Name: 
-// Module Name: binary_to_digits
-// Project Name: 
+// Module Name: binary_to_BCD
+// Project Name: DD Project
 // Target Devices: 
 // Tool Versions: 
 // Description: 
-// 
+// This is a basic module that basically implements the double dabble algorithm as explained above in the project report in details.
 // Dependencies: 
 // 
 // Revision:
@@ -19,7 +19,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module binary_to_digits(
+module binary_to_BCD(
     product,units,tenth,hundredth,thousandth,thousdandth2
     );
     input [15:0] product; 

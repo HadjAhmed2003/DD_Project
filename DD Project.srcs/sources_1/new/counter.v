@@ -5,11 +5,11 @@
 // Create Date: 05/14/2023 09:42:46 PM
 // Design Name: 
 // Module Name: counter
-// Project Name: 
+// Project Name: DD Project
 // Target Devices: 
 // Tool Versions: 
 // Description: 
-// 
+// Modulo 4 counter
 // Dependencies: 
 // 
 // Revision:

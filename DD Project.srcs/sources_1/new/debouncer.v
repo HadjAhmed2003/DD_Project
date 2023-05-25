@@ -5,11 +5,11 @@
 // Create Date: 05/14/2023 08:37:37 PM
 // Design Name: 
 // Module Name: debouncer
-// Project Name: 
+// Project Name: DD Project
 // Target Devices: 
 // Tool Versions: 
 // Description: 
-// 
+// The debouncer module removes glitches and noise from the input signal generating as output debounced version of the input signal. 
 // Dependencies: 
 // 
 // Revision:

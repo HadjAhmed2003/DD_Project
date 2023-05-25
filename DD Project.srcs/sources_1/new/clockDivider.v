@@ -5,11 +5,11 @@
 // Create Date: 05/14/2023 08:39:56 PM
 // Design Name: 
 // Module Name: clockDivider
-// Project Name: 
+// Project Name: DD Project
 // Target Devices: 
 // Tool Versions: 
 // Description: 
-// 
+// The clock divider module basically produces a slower clock
 // Dependencies: 
 // 
 // Revision:
@@ -20,8 +20,9 @@
 
 
 module clockDivider #(parameter n = 50000000)
-(input clk, rst, output reg clk_out);reg [31:0] count;
-// Big enough to hold the maximum possible value// Increment count
+(input clk, rst, output reg clk_out);
+reg [31:0] count;
+// Big enough to hold the maximum possible value
 always @ (posedge clk, posedge rst) begin
 if (rst == 1'b1) // Asynchronous Reset  count <= 32'b0;
 count <= 32'b0;

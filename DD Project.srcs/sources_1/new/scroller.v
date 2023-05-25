@@ -4,12 +4,16 @@
 // 
 // Create Date: 05/14/2023 09:59:16 PM
 // Design Name: 
-// Module Name: shifter
-// Project Name: 
+// Module Name: scroller
+// Project Name: DD Project
 // Target Devices: 
 // Tool Versions: 
 // Description: 
-// 
+// The module scroller is, as the name implies, used for scrolling through the digits of the product. The module uses a 2 bit wire named sel to indicate which three of the
+ five digits should be displayed. A value of 0 indicates that the units, tenth, and hundredth will be displayed. A value of 1 indicates that the tenth, hundredth, and thousandth
+ will be displayed. A value of 2 indicates that the hundredth, thousandth, and ten thousandth will be displayed. sl (to scroll left) and sr (to scroll right) are the buttons for
+ scrolling and they are two of the inputs of the module. If the scroll right button is pressed we add 1 to the value sel. If the scroll left button is pressed we subtract 1 from
+ the value sel. This change eventually scrolls the digits. Note that we have a maximum value of 2 and a minimum value of 0 for the value sel. That is because after scrolling right from the most left two times, we can’t scroll anymore. Same goes for the left scrolling
 // Dependencies: 
 // 
 // Revision:
@@ -19,12 +23,13 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module shifter(
-    units,tenth,hundredth,thousandth,thousdandth2,first,second,third,clk,rst,sl, sr , som
+module scroller(
+    clk,rst,units,tenth,hundredth,thousandth,thousdandth2,first,second,third,sl, sr , som
     );
+    input clk,rst,
+    input sl, sr, som;
     input [3:0] units,tenth,hundredth,thousandth,thousdandth2;
     output reg [3:0] first,second,third;
-    input clk,rst,sl, sr, som;
     reg [1:0] sel;
     always @ (posedge clk, posedge rst) begin
          if(rst || som)
